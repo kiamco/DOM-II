@@ -20,8 +20,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -105,10 +105,46 @@
         width: 80%;
         margin: 0 auto 30px;
       }
-      
+
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
       }
     }
   }
-}// home
+}
+
+// home
+
+.bg-modal {
+  width: 100%;
+  height: 225%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+
+
+}
+
+.modal-content {
+  width: 400px;
+  height: 500px;
+  border-radius: 1rem;
+  background-color: white;
+  align-self: flex-end;
+  margin-bottom: 20%;
+
+    form{
+      display: flex;
+      flex-flow: column wrap;
+      align-content: space-around;
+
+      input{
+        width: 80%;
+        height: 80%;
+        margin: 10px;
+      }
+    }
+
+}
