@@ -134,17 +134,59 @@
   background-color: white;
   align-self: flex-end;
   margin-bottom: 20%;
+  position: relative;
 
-    form{
-      display: flex;
-      flex-flow: column wrap;
-      align-content: space-around;
+  .close-btn {
+    text-align: right;
+    font-size: 2rem;
+    margin: 20px 20px 0px 0px;
+    padding:10px;
+    cursor: pointer;
+    &:hover{
+      color: @button-bg;
+     }
+  }
 
-      input{
-        width: 80%;
-        height: 80%;
-        margin: 10px;
+  form {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+
+    h1 {
+      text-align: center;
+      margin-top: 17px;
+    }
+
+    input {
+      width: 80%;
+      height: 50px;
+      margin: 10px;
+    }
+
+
+    a {
+      text-align: center;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 1.5rem;
+      border: 1px solid @button-bg;
+      color: white;
+      background: @button-bg;
+      border-radius: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        background: white;
+        color: @button-bg;
+      }
+
+      .close-btn {
+        margin-top: 10px;
+        font-size: 1rem;
+        text-align: right;
       }
     }
+
+  }
 
 }
