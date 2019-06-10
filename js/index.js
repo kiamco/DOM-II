@@ -1,5 +1,7 @@
 // Your code goes here
 // class variables
+const mainCon = document.querySelector('container');
+const navContainer = document.querySelector('.main-navigation');
 const nav = document.querySelector('header');
 const signUp = document.querySelector('.modal-content .signUp');
 const input = document.querySelector('.modal-content .name');
@@ -41,6 +43,24 @@ window.addEventListener('load', (event) => {
     console.log('page fully loaded');
 });
 
+// focus
 email.addEventListener('focus', event => {
     event.target.style.background = 'pink';
 }, true);
+
+// scroll
+window.addEventListener('scroll', event => {
+    if ((document.body.getBoundingClientRect()).top < 0) {
+        nav.style.opacity = '0.7';
+        navContainer.style.height = '50px';
+    } else {
+        nav.style.opacity = '1';
+        navContainer.style.height = '90px';
+    }
+});
+
+//resize
+window.addEventListener('resize', event => {
+    console.log(`browser height: ${event.target.innerHeight}`);
+    console.log(`browser width: ${event.target.innerHeight}`);
+});
